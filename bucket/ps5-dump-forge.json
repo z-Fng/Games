@@ -1,0 +1,45 @@
+{
+    "version": "0.5.6",
+    "description": "A toolkit for working with PS5 game dumps",
+    "homepage": "https://github.com/quer3q/ps5-dump-forge",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "Microsoft Edge WebView2": "extras/webview2"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.5.6/ps5-dump-forge-0.5.6-windows-x86-64.zip",
+            "hash": "9944ef56709c668925e4134c8827cd47ab4247a9a61e09c6e3a3c071d952cf11",
+            "extract_dir": "ps5-dump-forge-0.5.6-windows-x86-64"
+        },
+        "arm64": {
+            "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.5.6/ps5-dump-forge-0.5.6-windows-arm64.zip",
+            "hash": "ca0bc140245c08a8189c1e6069665d7bccbc76807d324fc93e6b9e0df7744187",
+            "extract_dir": "ps5-dump-forge-0.5.6-windows-arm64"
+        }
+    },
+    "bin": "ps5-dump-forge.exe",
+    "shortcuts": [
+        [
+            "PS5 Dump Forge.exe",
+            "PS5 Dump Forge"
+        ]
+    ],
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v$version/ps5-dump-forge-$version-windows-x86-64.zip",
+                "extract_dir": "ps5-dump-forge-$version-windows-x86-64"
+            },
+            "arm64": {
+                "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v$version/ps5-dump-forge-$version-windows-arm64.zip",
+                "extract_dir": "ps5-dump-forge-$version-windows-arm64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
